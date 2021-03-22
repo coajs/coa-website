@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build"
+    "build": "dourus build",
+    "deploy": "DEPLOYMENT_BRANCH=gh-pages GIT_USER=aex-bot docusaurus deploy"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.72",

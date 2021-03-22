@@ -1,13 +1,16 @@
 module.exports = {
   title: 'COA',
   tagline: '🌿 一个简单、快速、轻量的HTTP服务框架，专为API而生',
-  url: 'https://github.com/coajs',
-  baseUrl: '/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Coa',
-  projectName: 'Coa',
+
+  url: 'https://coajs.github.io', // Your website URL
+  baseUrl: '/',
+  projectName: 'coajs.github.io',
+  organizationName: 'coajs',
+
   themeConfig: {
     navbar: {
       title: 'COA',
