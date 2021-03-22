@@ -6,7 +6,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  url: '//coajs.com', // Your website URL
+  url: 'https://coajs.com',
   baseUrl: '/',
   projectName: 'coa-website',
   organizationName: 'coajs',
@@ -127,4 +127,4 @@ module.exports = {
       },
     ],
   ],
-};
+}
