@@ -6,7 +6,6 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  cname: 'coajs.com',
   url: 'https://coajs.com',
   baseUrl: '/',
   projectName: 'coa-website',
