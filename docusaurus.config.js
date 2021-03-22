@@ -1,14 +1,14 @@
 module.exports = {
   title: 'COA',
-  tagline: '🌿 一个简单、快速、轻量的HTTP服务框架，专为API而生',
+  tagline: '一个简单、快速、轻量的Web服务框架，专为API而生',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  url: 'https://coajs.github.io', // Your website URL
+  url: '//coajs.com', // Your website URL
   baseUrl: '/',
-  projectName: 'coajs.github.io',
+  projectName: 'coa-website',
   organizationName: 'coajs',
 
   themeConfig: {

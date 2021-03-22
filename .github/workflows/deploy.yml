@@ -5,7 +5,8 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
 
@@ -23,12 +24,13 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: 12
 
       - run: yarn
 
       - name: Release to GitHub Pages
         env:
+          GIT_USER: aex-bot
           GIT_PASS: ${{ secrets.AEX_BOT_TOKEN }}
         run: |
           git config --global user.email "spryti@163.com"
