@@ -30,4 +30,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           GIT_PASS: ${{ secrets.AEX_BOT_TOKEN }}
-        run: yarn deploy
+        run: |
+          git config --global user.email "spryti@163.com"
+          git config --global user.name "AexBot"
+          yarn deploy
