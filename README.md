@@ -1,3 +1,21 @@
-# coa-website
+# dumi app
 
-详情查看[coajs.com](http://coajs.com/)
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ npm i
+```
+
+Start the dev server,
+
+```bash
+$ npm start
+```
+
+Build site app,
+
+```bash
+$ npm run build
+```

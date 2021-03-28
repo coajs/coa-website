@@ -21,18 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
       - run: yarn
 
-      - name: Release to GitHub Pages
-        env:
-          GIT_USER: aex-bot
-          GIT_PASS: ${{ secrets.AEX_BOT_TOKEN }}
+      - name: Deploy to github pages
         run: |
           git config --global user.email "spryti@163.com"
           git config --global user.name "AexBot"
+          git remote set-url origin https://aex-bot:${{ secrets.AEX_BOT_TOKEN }}@github.com/coajs/coa-website.git
           yarn deploy
