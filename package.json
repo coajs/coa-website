@@ -5,7 +5,7 @@
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
-    "deploy": "dumi build && gh-pages -d dist",
+    "deploy": "dumi build && gh-pages -f -d dist",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
   },
   "repository": {
