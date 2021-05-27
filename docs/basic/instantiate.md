@@ -17,18 +17,18 @@ group:
 项目启动配置
 
 ```typescript
-import { CoaContext, CoaHttp } from 'coa-http';
-import { CoaEnv } from 'coa-env';
+import { CoaContext, CoaHttp } from 'coa-http'
+import { CoaEnv } from 'coa-env'
 
-const appEnv = new CoaEnv('1.0.0');
+const appEnv = new CoaEnv('1.0.0')
 
 export const http = new CoaHttp(
   CoaContext,
   appEnv, //环境变量初始化
   { baseUrl: '/xxx' }, //项目路由前缀
-);
+)
 
 http.start().then(() => {
   // 做一些启动后的事情
-});
+})
 ```

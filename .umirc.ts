@@ -5,5 +5,5 @@ export default defineConfig({
   title: 'COA',
   description: 'A lightweight web framework',
   logo: '/logo.png',
-  exportStatic: {}
+  exportStatic: {},
 })

@@ -36,19 +36,19 @@ tsconfig.json
 在 `gateway/index.ts` 中写入代码
 
 ```typescript
-import { CoaContext, CoaHttp } from 'coa-http';
+import { CoaContext, CoaHttp } from 'coa-http'
 
-export const http = new CoaHttp(CoaContext);
+export const http = new CoaHttp(CoaContext)
 
 http.start().then(() => {
   // 做一些启动后的事情
-});
+})
 ```
 
 在 `gateway/debug/test.ts` 中写入代码
 
 ```typescript
-import { http } from '..';
+import { http } from '..'
 
 http.register('调试', {
   '/debug/test/hello': {
@@ -57,10 +57,10 @@ http.register('调试', {
       name: '你好世界',
     },
     async handler() {
-      return { result: 'hello,world!' };
+      return { result: 'hello,world!' }
     },
   },
-});
+})
 ```
 
 在 `tsconfig.json` 中写入配置

@@ -25,7 +25,7 @@ gateway             #网关层
 
 ```typescript
 // index.ts
-import { http } from '..';
+import { http } from '..'
 
 http.routerConfig({
   info: {
@@ -44,10 +44,10 @@ http.routerConfig({
       digest: { type: 'apiKey', in: 'header', name: 'digest' },
     },
   },
-});
+})
 
 // debug.ts
-import { http } from '..';
+import { http } from '..'
 
 http.register('调试', {
   '/debug/test/hello': {
@@ -62,8 +62,8 @@ http.register('调试', {
       },
     },
     async handler() {
-      return { result: 'hello,world!' };
+      return { result: 'hello,world!' }
     },
   },
-});
+})
 ```
