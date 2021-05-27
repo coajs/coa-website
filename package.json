@@ -6,7 +6,7 @@
     "start": "dumi dev",
     "build": "dumi build",
     "deploy": "dumi build && gh-pages -f -d dist",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
+    "prettier": "prettier -w ."
   },
   "repository": {
     "type": "git",
@@ -15,8 +15,8 @@
     "platform": "github"
   },
   "devDependencies": {
-    "dumi": "^1.0.12",
-    "gh-pages": "^3.1.0",
-    "prettier": "^1.19.1"
+    "dumi": "^1.1.18",
+    "gh-pages": "^3.2.0",
+    "prettier": "^2.3.0"
   }
 }
