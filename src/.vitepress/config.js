@@ -1,71 +1,69 @@
-// @ts-check
-
-const nav = [
-  {
-    text: '指南',
-    activeMatch: `^/guide`,
-    link: '/guide/introduction'
-  },
-  {
-    text: '组件',
-    activeMatch: `^/component`,
-    link: '/component/core/coa-http'
-  }
-]
-
-const sidebar = {
-  '/guide/': [
+const i18n = require('./locales.json')
+const getSidebar = (lang) => {
+  const locale = i18n[lang]
+  const sidebar = {}
+  sidebar[`/${lang}/guide/`] = [
     {
-      text: '入门',
+      text: locale.gettingStarted,
       items: [
-        { text: '简介', link: '/guide/introduction' },
-        { text: '快速开始', link: '/guide/start' }
+        { text: locale.instantiate, link: `${lang}/guide/introduction` },
+        { text: locale.start, link: `${lang}/guide/start` }
       ]
     },
     {
-      text: '基础用法',
+      text: locale.basicUsage,
       items: [
-        { text: '环境配置', link: '/guide/basic/env' },
-        { text: '实例化', link: '/guide/basic/instantiate' },
-        { text: '路由及文档', link: '/guide/basic/route' },
-        { text: '错误配置', link: '/guide/basic/error' },
-        { text: '数据库连接', link: '/guide/basic/db' },
-        { text: '缓存', link: '/guide/basic/cache' }
+        { text: locale.env, link: `${lang}/guide/basic/env` },
+        { text: locale.instantiate, link: `${lang}/guide/basic/instantiate` },
+        { text: locale.route, link: `${lang}/guide/basic/route` },
+        { text: locale.error, link: `${lang}/guide/basic/error` },
+        { text: locale.db, link: `${lang}/guide/basic/db` },
+        { text: locale.cache, link: `${lang}/guide/basic/cache` }
       ]
     },
     {
-      text: '进阶介绍',
+      text: locale.advancedDescription,
       items: [
-        { text: '缓存数据模型', link: '/guide/advanced/cache-model' },
-        { text: '数据库关联', link: '/guide/advanced/model-database' }
-      ]
-    }
-  ],
-  '/component/': [
-    {
-      text: '核心组件',
-      items: [
-        { text: 'coa-http', link: '/component/core/coa-http' },
-        { text: 'coa-websocket', link: '/component/core/coa-websocket' },
-        { text: 'coa-tcp', link: '/component/core/coa-tcp' }
-      ]
-    },
-    {
-      text: '扩展组件',
-      items: [
-        { text: 'coa-mysql', link: '/component/expand/coa-mysql' },
-        { text: 'coa-redis', link: '/component/expand/coa-redis' }
-      ]
-    },
-    {
-      text: '第三方库',
-      items: [
-        { text: 'coa-wx-isv', link: '/component/external/coa-wx-isv' },
-        { text: 'coa-wx-pay', link: '/component/external/coa-wx-pay' },
-        { text: 'coa-ali-pop', link: '/component/external/coa-ali-pop' }
+        { text: locale.cacheModel, link: `${lang}/guide/advanced/cache-model` },
+        {
+          text: locale.modelDatabase,
+          link: `${lang}/guide/advanced/model-database`
+        }
       ]
     }
   ]
+  sidebar[`/${lang}/component/`] = [
+    {
+      text: locale.coreComponent,
+      items: [
+        { text: 'coa-http', link: `${lang}/component/core/coa-http` },
+        {
+          text: 'coa-websocket',
+          link: `${lang}/component/core/coa-websocket`
+        },
+        { text: 'coa-tcp', link: `${lang}/component/core/coa-tcp` }
+      ]
+    },
+    {
+      text: locale.expandComponent,
+      items: [
+        { text: 'coa-mysql', link: `${lang}/component/expand/coa-mysql` },
+        { text: 'coa-redis', link: `${lang}/component/expand/coa-redis` }
+      ]
+    },
+    {
+      text: locale.externalComponent,
+      items: [
+        { text: 'coa-wx-isv', link: `${lang}/component/external/coa-wx-isv` },
+        { text: 'coa-wx-pay', link: `${lang}/component/external/coa-wx-pay` },
+        {
+          text: 'coa-ali-pop',
+          link: `${lang}/component/external/coa-ali-pop`
+        }
+      ]
+    }
+  ]
+  return sidebar
 }
 /**
  * @type {import('vitepress').UserConfig}
@@ -84,18 +82,79 @@ module.exports = {
       stringify: true
     }
   },
-
-  lang: 'en-US',
-  title: 'Coa.js',
-  description: 'Coa.js - A Lightweight Web Framework',
-
-  head: [],
-
+  locales: {
+    '/zh-CN/': {
+      lang: 'zh-CN',
+      title: 'Coa.js'
+    },
+    '/en-US/': {
+      lang: 'en-US',
+      title: 'Coa.js - A Lightweight Web Framework'
+    }
+  },
   themeConfig: {
     logo: '/logo.png',
     repo: 'coajs',
     socialLinks: [{ icon: 'github', link: 'https://github.com/coajs/' }],
-    nav,
-    sidebar
+    locales: {
+      '/zh-CN/': {
+        lang: 'zh-CN',
+        title: 'Coa.js',
+        description: 'Coa.js - 轻量级的web框架.',
+        nav: [
+          {
+            text: '指南',
+            activeMatch: `^/zh-CN/guide`,
+            link: '/zh-CN/guide/introduction'
+          },
+          {
+            text: '组件',
+            activeMatch: `^/zh-CN/component`,
+            link: '/zh-CN/component/core/coa-http'
+          },
+          {
+            text: '语言',
+            items: [
+              {
+                items: [
+                  { text: '简体中文', link: '/zh-CN/' },
+                  { text: 'English', link: '/en-US/' }
+                ]
+              }
+            ]
+          }
+        ],
+        sidebar: getSidebar('zh-CN')
+      },
+      '/en-US/': {
+        lang: 'en-US',
+        title: 'Coa.js',
+        description: 'Coa.js - A Lightweight Web Framework.',
+        nav: [
+          {
+            text: 'Guide',
+            activeMatch: `^/en-US/guide`,
+            link: '/en-US/guide/introduction'
+          },
+          {
+            text: 'Component',
+            activeMatch: `^/en-US/component`,
+            link: '/en-US/component/core/coa-http'
+          },
+          {
+            text: 'Languages',
+            items: [
+              {
+                items: [
+                  { text: '简体中文', link: '/zh-CN/' },
+                  { text: 'English', link: '/en-US/' }
+                ]
+              }
+            ]
+          }
+        ],
+        sidebar: getSidebar('en-US')
+      }
+    }
   }
 }
