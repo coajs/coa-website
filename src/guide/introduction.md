@@ -1,8 +1,4 @@
----
-title: 简介
-toc: menu
-order: 1
----
+# 简介
 
 ## 什么是 COA
 

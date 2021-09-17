@@ -1,11 +1,4 @@
----
-title: 缓存
-toc: menu
-order: 6
-group:
-  title: 基础用法
-  order: 3
----
+# 缓存
 
 基于`coa-redis`,COA 核心 Redis 数据库组件，包含数据缓存、队列消息、定时任务、分布式锁等
 
@@ -44,8 +37,8 @@ const config = appEnv.getConfig({
     password: '',
     db: 1,
     prefix: 'test-d0', // 缓存前缀
-    trace: false,
-  },
+    trace: false
+  }
 })
 
 export default new (class {
@@ -95,7 +88,7 @@ const redisConfig = {
   // 键前缀，可区分不同的项目
   prefix: 'pre_',
   // 是否回显查询语句
-  trace: false,
+  trace: false
 }
 
 // 创建一个配置实例，后续所有的组件的使用均依赖此配置实例
@@ -129,7 +122,11 @@ await redisCache.delete('module1', ['id001', 'id002']) // 2
 ```typescript
 // 批量设置缓存数据
 await redisCache.mSet('module1', { id101: 'value101' }, 5 * 60 * 1000 /*5分钟*/) // 1
-await redisCache.mSet('module2', { id201: 'value201', id202: { name: 'A2', title: 'a2' } }, 5 * 60 * 1000 /*5分钟*/) // 2
+await redisCache.mSet(
+  'module2',
+  { id201: 'value201', id202: { name: 'A2', title: 'a2' } },
+  5 * 60 * 1000 /*5分钟*/
+) // 2
 
 // 批量读取缓存数据
 await redisCache.mGet('module1', ['id101']) // 'value101'
@@ -138,7 +135,7 @@ await redisCache.mGet('module2', ['id201', 'id202']) // { id201: 'value201', id2
 // 批量删除缓存数据（支持删除不同nsp下的多条数据）
 await redisCache.mDelete([
   ['module1', ['id101']],
-  ['module2', ['id201', 'id202']],
+  ['module2', ['id201', 'id202']]
 ]) // 3
 ```
 
@@ -153,7 +150,7 @@ const resultWarp1 = await redisCache.warp(
     // 这里做一些事情
     return Math.random() // 返回结果
   },
-  10 * 60 * 1000 /*10分钟*/,
+  10 * 60 * 1000 /*10分钟*/
 )
 
 resultWarp1 // 0.3745813097015189，10分钟内都返回 0.3745813097015189
@@ -181,7 +178,7 @@ const resultWarp2 = await redisCache.mWarp(
     }
     return result // 返回结果，务必保证键值对形式
   },
-  10 * 60 * 1000 /*10分钟*/,
+  10 * 60 * 1000 /*10分钟*/
 )
 
 resultWarp2 // { id301: 0.32430600236596074, id302: 0.29829421673682566 }
@@ -261,6 +258,6 @@ await redisLock.throttle(
   () => {
     // 做一些事情，这个事情不会并发执行
   },
-  1000 /*1秒钟*/,
+  1000 /*1秒钟*/
 )
 ```

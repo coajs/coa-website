@@ -1,22 +1,18 @@
 {
-  "name": "coa-website",
-  "version": "0.0.1",
-  "private": true,
+  "name": "vitepress-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "start": "dumi dev",
-    "build": "dumi build",
-    "deploy": "dumi build && gh-pages -f -d dist",
-    "prettier": "prettier -w ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coajs/coa-website.git",
-    "branch": "main",
-    "platform": "github"
+    "docs:dev": "vitepress dev src --port 3030",
+    "docs:build": "vitepress build src",
+    "docs:serve": "vitepress serve src"
   },
   "devDependencies": {
-    "dumi": "^1.1.18",
-    "gh-pages": "^3.2.0",
-    "prettier": "^2.3.0"
+    "@types/node": "^16.9.1",
+    "vitepress": "^0.18.0"
+  },
+  "dependencies": {
+    "@vue/theme": "^0.1.9"
   }
 }

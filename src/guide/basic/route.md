@@ -1,11 +1,4 @@
----
-title: 路由及文档
-toc: menu
-order: 3
-group:
-  title: 基础用法
-  order: 3
----
+# 路由及文档
 
 coa 项目中`gateway`文件夹下的每一个文件夹为一个模块，且模块间文档相互独立，文件夹下的`index.ts`文件为模块 swagger 概述文件
 
@@ -31,19 +24,19 @@ http.routerConfig({
   info: {
     title: 'debug', //
     version: '1.0.0',
-    description: '公共参数说明',
+    description: '公共参数说明'
   },
   externalDocs: {
     description: '外部链接',
-    url: 'https://www.baidu.com',
+    url: 'https://www.baidu.com'
   },
   components: {
     securitySchemes: {
       key: { type: 'apiKey', in: 'header', name: 'key' },
       time: { type: 'apiKey', in: 'header', name: 'time' },
-      digest: { type: 'apiKey', in: 'header', name: 'digest' },
-    },
-  },
+      digest: { type: 'apiKey', in: 'header', name: 'digest' }
+    }
+  }
 })
 
 // debug.ts
@@ -55,15 +48,15 @@ http.register('调试', {
       method: 'GET',
       name: '你好世界',
       param: {
-        name: { required: false, description: '姓名', example: '王小明' },
+        name: { required: false, description: '姓名', example: '王小明' }
       },
       result: {
-        name: { description: '姓名', example: '王小明' },
-      },
+        name: { description: '姓名', example: '王小明' }
+      }
     },
     async handler() {
       return { result: 'hello,world!' }
-    },
-  },
+    }
+  }
 })
 ```

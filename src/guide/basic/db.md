@@ -1,11 +1,4 @@
----
-title: 数据库连接
-toc: menu
-order: 5
-group:
-  title: 基础用法
-  order: 3
----
+# 数据库连接
 
 基于`coa-mysql`,COA 核心 MySQL 数据库组件，包含基本数据模型、缓存数据模型、分布式 ID 等
 
@@ -47,8 +40,8 @@ const mysqlConfig = {
   debug: false,
   databases: {
     main: { database: 'test', ms: 7 * 24 * 3600 * 1000 },
-    other: { database: 'other', ms: 7 * 24 * 3600 * 1000 },
-  },
+    other: { database: 'other', ms: 7 * 24 * 3600 * 1000 }
+  }
 }
 
 // 初始化Mysql基本连接，后续所有模型均依赖此实例
@@ -86,7 +79,7 @@ mysqlBin.io.table('user').insert({
   mobile: '15010001001',
   gender: 1,
   language: 'zh-CN',
-  status: 1,
+  status: 1
 })
 
 // 查询全部数据，详见 https://knexjs.org/#Builder-select
@@ -97,7 +90,10 @@ mysqlBin.io.select('*').from('user')
 mysqlBin.io.table('user').where('status', '=', 1)
 
 // 修改数据，详见 http://knexjs.org/#Builder-update
-mysqlBin.io.table('user').update({ name: 'AA', gender: 2 }).where({ userId: 'user-a' })
+mysqlBin.io
+  .table('user')
+  .update({ name: 'AA', gender: 2 })
+  .where({ userId: 'user-a' })
 
 // 删除数据，详见 http://knexjs.org/#Builder-del%20/%20delete
 mysqlBin.io.table('user').delete().where({ userId: 'user-a' })
@@ -122,7 +118,7 @@ const userScheme = {
   language: '' as string,
   status: 1 as number,
   created: 0 as number,
-  updated: 0 as number,
+  updated: 0 as number
 }
 // 定义User类型（通过默认结构自动生成）
 type UserScheme = typeof userScheme
@@ -135,9 +131,9 @@ const User = new (class extends MysqlNative<UserScheme> {
         name: 'User', // 表名，默认会转化为下划线(snackCase)形式，如 User->user UserPhoto->user_photo
         title: '用户表', // 表的备注名称
         scheme: userScheme, // 表的默认结构
-        pick: ['userId', 'name'], // 查询列表时显示的字段信息
+        pick: ['userId', 'name'] // 查询列表时显示的字段信息
       },
-      mysqlBin,
+      mysqlBin
     ) // 绑定配置实例bin
   }
 
@@ -157,7 +153,7 @@ await User.insert({ name: '王小明', gender: 1 }) // 返回 'id001'，即该�
 // 批量插入
 await User.mInsert([
   { name: '王小明', gender: 1 },
-  { name: '宋小华', gender: 1 },
+  { name: '宋小华', gender: 1 }
 ]) // 返回 ['id002','id003']
 
 // 通过ID更新
@@ -211,7 +207,7 @@ const User = new (class extends MysqlNativeModel<UserScheme> {
       name: 'User',
       title: '用户表',
       scheme: userScheme,
-      pick: ['userId', 'name'],
+      pick: ['userId', 'name']
     })
   }
 
@@ -228,7 +224,7 @@ const Manager = new (class extends MysqlNativeModel<UserScheme> {
       name: 'Manager',
       title: '管理员表',
       scheme: userScheme,
-      pick: ['userId', 'name'],
+      pick: ['userId', 'name']
     })
   }
 })()

@@ -1,14 +1,8 @@
----
-title: 缓存数据模型
-order: 1
-group:
-  title: 进阶使用
-  order: 4
----
+# 缓存数据模型
 
 缓存数据模型基于 [coa-redis](https://www.npmjs.com/package/coa-redis) 实现快速高效的数据缓存，并**统一对缓存进行管理、维护缓存的生命周期、保证缓存与 MySQL 数据的一致性**
 
-使用之前需安装 `coa-redis` ，使用方法可查看 [这里](/docs/cache)
+使用之前需安装 `coa-redis` ，使用方法可查看 [这里](/component/expand/coa-redis)
 
 缓存数据模型的使用方法和基本数据模型完全相同，仅需要将 `MysqlNative` 替换为 `MysqlCache`
 
@@ -34,7 +28,7 @@ const UserCached = new (class extends MysqlCacheModel<UserScheme> {
       name: 'User',
       title: '用户表',
       scheme: userScheme,
-      pick: ['userId', 'name'],
+      pick: ['userId', 'name']
     })
   }
 })()

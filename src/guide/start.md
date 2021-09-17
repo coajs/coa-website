@@ -1,8 +1,4 @@
----
-title: 快速开始
-toc: menu
-order: 2
----
+# 快速开始
 
 ## 环境安装
 
@@ -54,12 +50,12 @@ http.register('调试', {
   '/debug/test/hello': {
     options: {
       method: 'GET',
-      name: '你好世界',
+      name: '你好世界'
     },
     async handler() {
       return { result: 'hello,world!' }
-    },
-  },
+    }
+  }
 })
 ```
 

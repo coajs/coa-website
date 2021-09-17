@@ -1,20 +1,12 @@
----
-title: 错误配置
-toc: menu
-order: 4
+# 错误配置
 
-group:
-  title: 基础用法
-  order: 3
----
-
-### 安装
+## 安装
 
 ```sh
 $ yarn add coa-error
 ```
 
-### 示例
+## 示例
 
 ```typescript
 import { CoaError } from 'coa-error'

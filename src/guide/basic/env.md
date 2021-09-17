@@ -1,15 +1,6 @@
----
-title: 环境配置
-toc: menu
-order: 1
-group:
-  title: 基础用法
-  order: 3
----
-
 # 环境配置
 
-环境配置依赖于[coa-env]()
+环境配置依赖于[coa-env](https://github.com/coajs/coa-env)
 
 ## 安装
 
@@ -56,7 +47,7 @@ const cwd = appEnv.cwd
 const hostConfig1 = appEnv.getConfig({
   d1: { host: '127.0.0.1' },
   t1: { host: '192.168.0.1' },
-  v1: { host: '172.16.0.1' },
+  v1: { host: '172.16.0.1' }
 })
 // 当环境是d1，返回 { host: '127.0.0.1' }
 // 当环境是t1，返回 { host: '192.168.0.1' }
@@ -71,7 +62,7 @@ const hostConfig1 = appEnv.getConfig({
 const hostConfig2 = appEnv.getConfig({
   d: { host: '127.0.0.1' },
   t: { host: '192.168.0.1' },
-  v: { host: '172.16.0.1' },
+  v: { host: '172.16.0.1' }
 })
 // 当环境是d1 d2 d3，返回 { host: '127.0.0.1' }
 // 当环境是t1 t2 t3，返回 { host: '192.168.0.1' }
@@ -85,7 +76,7 @@ const hostConfig2 = appEnv.getConfig({
 // 用 $ 可以代表默认配置，当配置表不存在对应环境时，返回默认配置
 const hostConfig3 = appEnv.getConfig({
   $: { host: '127.0.0.1' },
-  v: { host: '172.16.0.1' },
+  v: { host: '172.16.0.1' }
 })
 // 当环境是v1 v2 v3，返回 { host: '172.16.0.1' }
 // 其他环境，一律返回 { host: '127.0.0.1' }
@@ -95,7 +86,7 @@ const hostConfig3 = appEnv.getConfig({
 
 ```typescript
 // 以下属性均为只读属性，在实例创建时刻就已经固定，实例生成后无法修改
-class CoaEnv {
+class CoaEnv extends Error {
   // runEnv 运行环境，一般定义为开发类环境('d0' 'd1' 'd2') 测试类环境('t0' 't1' 't2') 生产类环境('v0' 'v1' 'v2')等
   // 由环境变量 process.env.RUN_ENV 控制，如果没有定义，则默认为 'd0'
   public readonly runEnv: string
@@ -112,7 +103,7 @@ class CoaEnv {
   // name 当前包名，由 package.json 中的 name 控制
   public readonly name: string
 
-  // isProd 是否是生产环境，由 process.env.NODE_ENV === 'production' 控制，只要不是 'production' 均为非生产环境
+  // isProd 是否是生产环境，由 process .env.NODE_ENV === 'production' 控制，只要不是 'production' 均为非生产环境
   public readonly isProd: boolean
 
   // isOnline 是否是线上环境，由 runEnvType === 'v' 控制，只要不是 'v' 均为非线上环境
