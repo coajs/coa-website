@@ -1,0 +1,38 @@
+{
+  "zh-CN": {
+    "gettingStarted": "入门",
+    "introduction": "简介",
+    "start": "快速开始",
+    "basicUsage": "基础用法",
+    "env": "环境配置",
+    "instantiate": "实例化",
+    "route": "路由及文档",
+    "error": "错误配置",
+    "db": "数据库连接",
+    "cache": "缓存",
+    "advancedDescription": "进阶介绍",
+    "cacheModel": "缓存数据模型",
+    "modelDatabase": "数据库关联",
+    "coreComponent": "核心组件",
+    "expandComponent": "扩展组件",
+    "externalComponent": "第三方库"
+  },
+  "en-US": {
+    "gettingStarted": "Getting Started",
+    "introduction": "Introduction",
+    "start": "Quick Start",
+    "basicUsage": "Basic Usage",
+    "env": "Env",
+    "instantiate": "Instantiate",
+    "route": "Route and docs",
+    "error": "Error",
+    "db": "Database connection",
+    "cache": "Cache",
+    "advancedDescription": "Advanced",
+    "cacheModel": "Cached data model",
+    "modelDatabase": "Database association",
+    "coreComponent": "Core components",
+    "expandComponent": "Expansion component",
+    "externalComponent": "Third-party library"
+  }
+}
