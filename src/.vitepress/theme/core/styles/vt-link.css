@@ -1,0 +1,9 @@
+.vt-link-icon {
+  display: inline-block;
+  margin-top: -4px;
+  margin-left: 3px;
+  width: 11px;
+  height: 11px;
+  fill: var(--vt-c-text-3);
+  transition: fill 0.25s;
+}

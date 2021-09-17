@@ -69,8 +69,6 @@ const getSidebar = (lang) => {
  * @type {import('vitepress').UserConfig}
  */
 module.exports = {
-  // @ts-ignore
-  extends: require('@vue/theme/config'),
   vite: {
     server: {
       host: true

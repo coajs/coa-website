@@ -1,5 +1,6 @@
 import { h } from 'vue'
-import { VPTheme, VTBadge } from '@vue/theme'
+import { VPTheme } from './vitepress'
+import { VTBadge } from './core'
 
 export default Object.assign({}, VPTheme, {
   Layout: () => {

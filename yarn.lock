@@ -193,6 +193,11 @@
   resolved "https://registry.nlark.com/@polka/url/download/@polka/url-1.0.0-next.20.tgz#111b5db0f501aa89b05076fa31f0ea0e0c292cd3"
   integrity sha1-ERtdsPUBqomwUHb6MfDqDgwpLNM=
 
+"@types/body-scroll-lock@^2.6.1":
+  version "2.6.2"
+  resolved "https://registry.nlark.com/@types/body-scroll-lock/download/@types/body-scroll-lock-2.6.2.tgz#ce56d17e1bf8383c08a074733c4e9e536a59ae61"
+  integrity sha1-zlbRfhv4ODwIoHRzPE6eU2pZrmE=
+
 "@types/estree@^0.0.48":
   version "0.0.48"
   resolved "https://registry.nlark.com/@types/estree/download/@types/estree-0.0.48.tgz#18dc8091b285df90db2f25aa7d906cfc394b7f74"
@@ -325,18 +330,6 @@
   version "3.2.11"
   resolved "https://registry.nlark.com/@vue/shared/download/@vue/shared-3.2.11.tgz#01899f54949caf1ac241de397bd17069632574de"
   integrity sha1-AYmfVJScrxrCQd45e9FwaWMldN4=
-
-"@vue/theme@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.nlark.com/@vue/theme/download/@vue/theme-0.1.9.tgz#ec51a2ee41eb544b64b288ebd8fd6db8c555226e"
-  integrity sha1-7FGi7kHrVEtksojr2P1tuMVVIm4=
-  dependencies:
-    "@docsearch/css" "^1.0.0-alpha.28"
-    "@docsearch/js" "^1.0.0-alpha.28"
-    "@vueuse/core" "^5.0.2"
-    body-scroll-lock "^3.1.5"
-    normalize.css "^8.0.1"
-    shiki "^0.9.9"
 
 "@vueuse/core@^5.0.2":
   version "5.3.0"
@@ -1278,6 +1271,11 @@ trouter@^2.0.1:
   integrity sha1-Jyal+FWOCQ0kw6OT8J6qsd8jLfY=
   dependencies:
     matchit "^1.0.0"
+
+typescript@^4.3.2:
+  version "4.4.3"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  integrity sha1-vcVAfKorEJ79T4L+EwZW+XeikyQ=
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
