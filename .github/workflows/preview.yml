@@ -1,0 +1,24 @@
+name: Preview
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  to-surge:
+    name: Deploy to surge
+
+    if: ${{ github.repository_owner == 'coajs' }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: yarn
+
+      - run: yarn docs:build
+
+      - name: Deploy to surge
+        run: yarn surge src/.vitepress/dist preview-coajs-com.surge.sh --token=${{ secrets.AEX_SURGE_TOKEN }}

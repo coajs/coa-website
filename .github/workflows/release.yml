@@ -3,13 +3,13 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
-  github-pages:
+  to-github-pages:
     name: Deploy to github pages
 
-    if: github.repository_owner == 'coajs'
+    if: ${{ github.repository_owner == 'coajs' }}
 
     runs-on: ubuntu-latest
 
@@ -18,9 +18,10 @@ jobs:
 
       - run: yarn
 
+      - run: yarn docs:build
+
       - name: Deploy to github pages
-        run: |
-          git config --global user.email "spryti@163.com"
-          git config --global user.name "AexBot"
-          git remote set-url origin https://aex-bot:${{ secrets.AEX_BOT_TOKEN }}@github.com/coajs/coa-website.git
-          yarn deploy
+        uses: JamesIves/github-pages-deploy-action@4
+        with:
+          branch: gh-pages
+          folder: src/.vitepress/dist

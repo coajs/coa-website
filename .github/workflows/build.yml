@@ -2,8 +2,6 @@ name: Build
 
 on:
   pull_request:
-    branches:
-      - main
 
 jobs:
   check:
@@ -15,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: yarn
-      - run: yarn build
+      - run: yarn docs:build
