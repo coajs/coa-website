@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+"@algolia/autocomplete-core@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.nlark.com/@algolia/autocomplete-core/download/@algolia/autocomplete-core-1.2.2.tgz#c121e70c78fd0175c989a219918124ad7758e48b"
+  integrity sha1-wSHnDHj9AXXJiaIZkYEkrXdY5Is=
+  dependencies:
+    "@algolia/autocomplete-shared" "1.2.2"
+
+"@algolia/autocomplete-preset-algolia@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.nlark.com/@algolia/autocomplete-preset-algolia/download/@algolia/autocomplete-preset-algolia-1.2.2.tgz#da734ef9e42a5f64cdad2dfc81c4e9fbf805d976"
+  integrity sha1-2nNO+eQqX2TNrS38gcTp+/gF2XY=
+  dependencies:
+    "@algolia/autocomplete-shared" "1.2.2"
+
+"@algolia/autocomplete-shared@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.nlark.com/@algolia/autocomplete-shared/download/@algolia/autocomplete-shared-1.2.2.tgz#ff25dc308f2a296b2b9b325f1e3b57498eea3e0c"
+  integrity sha1-/yXcMI8qKWsrmzJfHjtXSY7qPgw=
+
 "@algolia/cache-browser-local-storage@4.10.5":
   version "4.10.5"
   resolved "https://registry.nlark.com/@algolia/cache-browser-local-storage/download/@algolia/cache-browser-local-storage-4.10.5.tgz?cache=0&sync_timestamp=1629984287519&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40algolia%2Fcache-browser-local-storage%2Fdownload%2F%40algolia%2Fcache-browser-local-storage-4.10.5.tgz#961cf07cf59955de17af13bd74f7806bd2119553"
@@ -129,6 +148,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@docsearch/css@3.0.0-alpha.40", "@docsearch/css@^3.0.0-alpha.40":
+  version "3.0.0-alpha.40"
+  resolved "https://registry.nlark.com/@docsearch/css/download/@docsearch/css-3.0.0-alpha.40.tgz#c37bd7b03f4c30a6ea7a19b87fe71880d2e8b22a"
+  integrity sha1-w3vXsD9MMKbqehm4f+cYgNLosio=
+
 "@docsearch/css@^1.0.0-alpha.28":
   version "1.0.0-alpha.28"
   resolved "https://registry.nlark.com/@docsearch/css/download/@docsearch/css-1.0.0-alpha.28.tgz#c8a2cd8c1bb3a6855c51892e9dbdab5d42fe6e23"
@@ -141,6 +165,24 @@
   dependencies:
     "@docsearch/react" "^1.0.0-alpha.28"
     preact "^10.0.0"
+
+"@docsearch/js@^3.0.0-alpha.40":
+  version "3.0.0-alpha.40"
+  resolved "https://registry.nlark.com/@docsearch/js/download/@docsearch/js-3.0.0-alpha.40.tgz#28b48fd23053222e6097ddfa3b515ae388634717"
+  integrity sha1-KLSP0jBTIi5gl936O1Fa44hjRxc=
+  dependencies:
+    "@docsearch/react" "3.0.0-alpha.40"
+    preact "^10.0.0"
+
+"@docsearch/react@3.0.0-alpha.40":
+  version "3.0.0-alpha.40"
+  resolved "https://registry.nlark.com/@docsearch/react/download/@docsearch/react-3.0.0-alpha.40.tgz#d912b4bb7281cb0faf65590c9cf022aa2a13d823"
+  integrity sha1-2RK0u3KByw+vZVkMnPAiqioT2CM=
+  dependencies:
+    "@algolia/autocomplete-core" "1.2.2"
+    "@algolia/autocomplete-preset-algolia" "1.2.2"
+    "@docsearch/css" "3.0.0-alpha.40"
+    algoliasearch "^4.0.0"
 
 "@docsearch/react@^1.0.0-alpha.28":
   version "1.0.0-alpha.28"
@@ -193,15 +235,20 @@
   resolved "https://registry.nlark.com/@polka/url/download/@polka/url-1.0.0-next.20.tgz#111b5db0f501aa89b05076fa31f0ea0e0c292cd3"
   integrity sha1-ERtdsPUBqomwUHb6MfDqDgwpLNM=
 
-"@types/body-scroll-lock@^2.6.1":
-  version "2.6.2"
-  resolved "https://registry.nlark.com/@types/body-scroll-lock/download/@types/body-scroll-lock-2.6.2.tgz#ce56d17e1bf8383c08a074733c4e9e536a59ae61"
-  integrity sha1-zlbRfhv4ODwIoHRzPE6eU2pZrmE=
+"@types/body-scroll-lock@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.nlark.com/@types/body-scroll-lock/download/@types/body-scroll-lock-3.1.0.tgz#435f6abf682bf58640e1c2ee5978320b891970e7"
+  integrity sha1-Q19qv2gr9YZA4cLuWXgyC4kZcOc=
 
 "@types/estree@^0.0.48":
   version "0.0.48"
   resolved "https://registry.nlark.com/@types/estree/download/@types/estree-0.0.48.tgz#18dc8091b285df90db2f25aa7d906cfc394b7f74"
   integrity sha1-GNyAkbKF35DbLyWqfZBs/DlLf3Q=
+
+"@types/estree@^0.0.50":
+  version "0.0.50"
+  resolved "https://registry.nlark.com/@types/estree/download/@types/estree-0.0.50.tgz#1e0caa9364d3fccd2931c3ed96fdbeaa5d4cca83"
+  integrity sha1-Hgyqk2TT/M0pMcPtlv2+ql1MyoM=
 
 "@types/linkify-it@*":
   version "3.0.2"
@@ -222,10 +269,10 @@
   resolved "https://registry.nlark.com/@types/mdurl/download/@types/mdurl-1.0.2.tgz?cache=0&sync_timestamp=1629708335037&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fmdurl%2Fdownload%2F%40types%2Fmdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
   integrity sha1-4s6dg6YTus8oTHvn1JGUXjnh+Ok=
 
-"@types/node@^16.9.1":
-  version "16.9.1"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.9.1.tgz?cache=0&sync_timestamp=1631653461222&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.9.1.tgz#0611b37db4246c937feef529ddcc018cf8e35708"
-  integrity sha1-BhGzfbQkbJN/7vUp3cwBjPjjVwg=
+"@types/node@^16.9.2":
+  version "16.9.2"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.9.2.tgz?cache=0&sync_timestamp=1631828244883&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.9.2.tgz#81f5a039d6ed1941f8cc57506c74e7c2b8fc64b9"
+  integrity sha1-gfWgOdbtGUH4zFdQbHTnwrj8ZLk=
 
 "@vitejs/plugin-vue@^1.4.0":
   version "1.6.2"
@@ -243,6 +290,17 @@
     estree-walker "^2.0.2"
     source-map "^0.6.1"
 
+"@vue/compiler-core@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/compiler-core/download/@vue/compiler-core-3.2.12.tgz#23998d6986a45e1ab0424130cc0ad00e33da1101"
+  integrity sha1-I5mNaYakXhqwQkEwzArQDjPaEQE=
+  dependencies:
+    "@babel/parser" "^7.15.0"
+    "@babel/types" "^7.15.0"
+    "@vue/shared" "3.2.12"
+    estree-walker "^2.0.2"
+    source-map "^0.6.1"
+
 "@vue/compiler-dom@3.2.11":
   version "3.2.11"
   resolved "https://registry.nlark.com/@vue/compiler-dom/download/@vue/compiler-dom-3.2.11.tgz#d066f8e1f1812b4e881593819ade0fe6d654c776"
@@ -250,6 +308,14 @@
   dependencies:
     "@vue/compiler-core" "3.2.11"
     "@vue/shared" "3.2.11"
+
+"@vue/compiler-dom@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/compiler-dom/download/@vue/compiler-dom-3.2.12.tgz?cache=0&sync_timestamp=1631890840464&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fcompiler-dom%2Fdownload%2F%40vue%2Fcompiler-dom-3.2.12.tgz#d6ba00114e73adb8b18940c3ff18797cc2b0514f"
+  integrity sha1-1roAEU5zrbixiUDD/xh5fMKwUU8=
+  dependencies:
+    "@vue/compiler-core" "3.2.12"
+    "@vue/shared" "3.2.12"
 
 "@vue/compiler-sfc@^3.2.7":
   version "3.2.11"
@@ -290,6 +356,13 @@
   dependencies:
     "@vue/shared" "3.2.11"
 
+"@vue/reactivity@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/reactivity/download/@vue/reactivity-3.2.12.tgz#b482a737cbdc891f9b1ec3100f3c1804b56d080b"
+  integrity sha1-tIKnN8vciR+bHsMQDzwYBLVtCAs=
+  dependencies:
+    "@vue/shared" "3.2.12"
+
 "@vue/ref-transform@3.2.11":
   version "3.2.11"
   resolved "https://registry.nlark.com/@vue/ref-transform/download/@vue/ref-transform-3.2.11.tgz#4d282b9570d1485a73e7bf5d57cce27b4a7aa690"
@@ -309,6 +382,14 @@
     "@vue/reactivity" "3.2.11"
     "@vue/shared" "3.2.11"
 
+"@vue/runtime-core@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/runtime-core/download/@vue/runtime-core-3.2.12.tgz#422662fd5b85f787222d2aea840264ba97e84a13"
+  integrity sha1-QiZi/VuF94ciLSrqhAJkupfoShM=
+  dependencies:
+    "@vue/reactivity" "3.2.12"
+    "@vue/shared" "3.2.12"
+
 "@vue/runtime-dom@3.2.11":
   version "3.2.11"
   resolved "https://registry.nlark.com/@vue/runtime-dom/download/@vue/runtime-dom-3.2.11.tgz#04f9054a9e64bdf156c2fc22cad67cfaa8b84616"
@@ -316,6 +397,15 @@
   dependencies:
     "@vue/runtime-core" "3.2.11"
     "@vue/shared" "3.2.11"
+    csstype "^2.6.8"
+
+"@vue/runtime-dom@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/runtime-dom/download/@vue/runtime-dom-3.2.12.tgz?cache=0&sync_timestamp=1631890568879&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fruntime-dom%2Fdownload%2F%40vue%2Fruntime-dom-3.2.12.tgz#d9fe865dca36f9ca33ba327afdeb89ae2aa03f4c"
+  integrity sha1-2f6GXco2+cozujJ6/euJriqgP0w=
+  dependencies:
+    "@vue/runtime-core" "3.2.12"
+    "@vue/shared" "3.2.12"
     csstype "^2.6.8"
 
 "@vue/server-renderer@^3.2.7":
@@ -331,18 +421,23 @@
   resolved "https://registry.nlark.com/@vue/shared/download/@vue/shared-3.2.11.tgz#01899f54949caf1ac241de397bd17069632574de"
   integrity sha1-AYmfVJScrxrCQd45e9FwaWMldN4=
 
-"@vueuse/core@^5.0.2":
-  version "5.3.0"
-  resolved "https://registry.nlark.com/@vueuse/core/download/@vueuse/core-5.3.0.tgz?cache=0&sync_timestamp=1631485707301&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vueuse%2Fcore%2Fdownload%2F%40vueuse%2Fcore-5.3.0.tgz#d8c6e939e18089afa224fab6e443fae2bdb57a51"
-  integrity sha1-2MbpOeGAia+iJPq25EP64r21elE=
+"@vue/shared@3.2.12":
+  version "3.2.12"
+  resolved "https://registry.nlark.com/@vue/shared/download/@vue/shared-3.2.12.tgz#304064a4b56fc6c7b9169d80e9ee62ecb4bf0a1c"
+  integrity sha1-MEBkpLVvxse5Fp2A6e5i7LS/Chw=
+
+"@vueuse/core@^6.4.1":
+  version "6.4.1"
+  resolved "https://registry.nlark.com/@vueuse/core/download/@vueuse/core-6.4.1.tgz?cache=0&sync_timestamp=1631911935116&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vueuse%2Fcore%2Fdownload%2F%40vueuse%2Fcore-6.4.1.tgz#21416997a23bfb4924a5082ed6fa959027f80d04"
+  integrity sha1-IUFpl6I7+0kkpQgu1vqVkCf4DQQ=
   dependencies:
-    "@vueuse/shared" "5.3.0"
+    "@vueuse/shared" "6.4.1"
     vue-demi "*"
 
-"@vueuse/shared@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.nlark.com/@vueuse/shared/download/@vueuse/shared-5.3.0.tgz?cache=0&sync_timestamp=1631485700955&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vueuse%2Fshared%2Fdownload%2F%40vueuse%2Fshared-5.3.0.tgz#2b9583f80f1284242f808925e7e141310e400e45"
-  integrity sha1-K5WD+A8ShCQvgIkl5+FBMQ5ADkU=
+"@vueuse/shared@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.nlark.com/@vueuse/shared/download/@vueuse/shared-6.4.1.tgz?cache=0&sync_timestamp=1631911934670&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vueuse%2Fshared%2Fdownload%2F%40vueuse%2Fshared-6.4.1.tgz#5bc84be107cead84e11c21d2c57b1e9f2c376975"
+  integrity sha1-W8hL4QfOrYThHCHSxXsenyw3aXU=
   dependencies:
     vue-demi "*"
 
@@ -505,10 +600,10 @@ bluebird@^3.7.2:
   resolved "https://registry.nlark.com/bluebird/download/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
 
-body-scroll-lock@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.nlark.com/body-scroll-lock/download/body-scroll-lock-3.1.5.tgz#c1392d9217ed2c3e237fee1e910f6cdd80b7aaec"
-  integrity sha1-wTktkhftLD4jf+4ekQ9s3YC3quw=
+body-scroll-lock@^4.0.0-beta.0:
+  version "4.0.0-beta.0"
+  resolved "https://registry.nlark.com/body-scroll-lock/download/body-scroll-lock-4.0.0-beta.0.tgz#4f78789d10e6388115c0460cd6d7d4dd2bbc4f7e"
+  integrity sha1-T3h4nRDmOIEVwEYM1tfU3Su8T34=
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -2026,10 +2121,10 @@ vite@^2.5.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.nlark.com/vitepress/download/vitepress-0.18.0.tgz#6c2c521379f2f8807f26de64679629a25abfaa5d"
-  integrity sha1-bCxSE3ny+IB/Jt5kZ5Ypolq/ql0=
+vitepress@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.nlark.com/vitepress/download/vitepress-0.18.1.tgz#d9d5c4fe2239c526ec09a3a38fce8091deabac7c"
+  integrity sha1-2dXE/iI5xSbsCaOjj86Akd6rrHw=
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
@@ -2068,6 +2163,15 @@ vue-demi@*:
   version "0.11.4"
   resolved "https://registry.nlark.com/vue-demi/download/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
   integrity sha1-YQGZL+RyTPVjQBihbpU/MFLpTio=
+
+vue@3.2.12:
+  version "3.2.12"
+  resolved "https://registry.nlark.com/vue/download/vue-3.2.12.tgz?cache=0&sync_timestamp=1631890707919&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue%2Fdownload%2Fvue-3.2.12.tgz#b44f55506fb6a7c4b65635e609deb5f9368aa2ce"
+  integrity sha1-tE9VUG+2p8S2VjXmCd61+TaKos4=
+  dependencies:
+    "@vue/compiler-dom" "3.2.12"
+    "@vue/runtime-dom" "3.2.12"
+    "@vue/shared" "3.2.12"
 
 vue@^3.2.7:
   version "3.2.11"
