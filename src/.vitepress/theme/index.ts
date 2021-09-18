@@ -4,7 +4,7 @@ import { VTBadge } from './core'
 
 export default Object.assign({}, VPTheme, {
   Layout: () => {
-    return h(VPTheme.Layout, null)
+    return h(VPTheme.Layout as any, null)
   },
   enhanceApp({ app }) {
     app.component('Badge', VTBadge)

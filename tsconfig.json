@@ -7,5 +7,5 @@
     "resolveJsonModule": true,
     "allowJs": true
   },
-  "include": ["src/**/*", "src/.vitepress/**/*"]
+  "include": ["src/**/*", "src/.vitepress/**/*", "shim.d.ts"]
 }
