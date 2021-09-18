@@ -1,10 +1,9 @@
 import { ref, computed } from 'vue'
-import { useRoute, useData, useRouter  } from 'vitepress'
+import { useData, useRouter } from 'vitepress'
 import { getSidebar } from '../support/sidebar'
 import { useConfig } from './config'
 
 export function useSidebar() {
-  const route = useRoute()
   const router = useRouter()
   const { config } = useConfig()
   const { frontmatter } = useData()
@@ -14,8 +13,6 @@ export function useSidebar() {
   const sidebar = computed(() => {
     const sidebarConfig = config.value.sidebar
     const relativePath = router.route.path
-    console.log(router.route.path)
-    console.log(relativePath)
     return sidebarConfig ? getSidebar(sidebarConfig, relativePath) : []
   })
 
